@@ -9,7 +9,7 @@
 #define STATE_GAMEOVER 2
 #define STATE_VICTORY 3
 
-typedef struct Projectile {
+typedef struct Projectile{
     float x, y;
     float width, height;
     float dir_x, dir_y;
@@ -20,7 +20,7 @@ typedef struct Projectile {
     struct Projectile *next;
 } Projectile;
 
-typedef struct Enemy {
+typedef struct Enemy{
     float x, y;
     float speed;
     int hp;
@@ -29,7 +29,7 @@ typedef struct Enemy {
     struct Enemy *next;
 } Enemy;
 
-typedef struct Boss {
+typedef struct Boss{
     float x, y;
     float speed;
     int hp;
@@ -39,7 +39,7 @@ typedef struct Boss {
     int is_active;
 } Boss;
 
-typedef struct Hero {
+typedef struct Hero{
     float x, y;
     float speed;
     int damage;
@@ -49,7 +49,7 @@ typedef struct Hero {
     int cooldown_frames;
 } Hero;
 
-typedef struct World {
+typedef struct World{
     Hero hero;
     Boss boss;
     Enemy *enemy_list;
@@ -60,7 +60,7 @@ typedef struct World {
     int current_state;
 } World;
 
-typedef struct App {
+typedef struct App{
     SDL_Window *window;
     SDL_Renderer *renderer;
     
